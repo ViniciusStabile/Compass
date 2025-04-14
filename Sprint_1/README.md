@@ -1,12 +1,3 @@
-# Instruções
-
-Este arquivo sera o relato da sua entrega. Neste arquivo você fará a organização geral ao longo da Sprint. Esperamos que haja, minimamente:
-
-- Uma ou mais seções para descrever o que estiver aprendendo (resumo), de maneira estruturada.
-
-- Breve conteúdo de cada pasta relacionada a sprint.
-
-
 # Resumo do Curso: SQL para Análise de Dados — Do basico ao avançado
 
 ## Seção 3: Comandos basicos
