@@ -26,6 +26,11 @@ A tabela original recebida foi esta daqui
 - Apliquei normalização (até 3FN) para evitar redundâncias
 - Defini **chaves primárias e estrangeiras** para manter integridade referencial
 
+### Formas Normais aplicadas:
+- **1ª Forma Normal (1FN):** Eliminação de grupos repetitivos e criação de colunas atômicas  
+- **2ª Forma Normal (2FN):** Separação dos dados que não dependem da chave primária (ex: dados do cliente, carro, vendedor)  
+- **3ª Forma Normal (3FN):** Eliminação de dependências transitivas, mantendo apenas os atributos diretamente ligados à chave primária em cada tabela
+
 Assim ficou o modelo relacional 
 
 ![modelo relacional](MODELO_RELACIONAL.png)
