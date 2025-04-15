@@ -1,4 +1,7 @@
 #  Apresentação
+<p align="center">
+  <img src="./FotoPerfil.jpeg" alt="Foto de Vinicius Gabriel Stábile da Costa" width="200" style="border-radius: 10px;">
+</p>
 
 Olá! Me chamo **Vinicius Gabriel Stábile da Costa**, tenho **21 anos** e moro em **São José dos Campos - SP**. Atualmente, sou estudante de **Ciência da Computação** na **Universidade Paulista (UNIP)**, estando no **7º semestre** da graduação.
 

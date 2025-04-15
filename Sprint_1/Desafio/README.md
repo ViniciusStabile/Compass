@@ -31,7 +31,7 @@ A tabela original `tb_locacao` foi fornecida no seguinte formato:
 
 ###  Modelo Relacional
 
-![Modelo Relacional](MODELO_RELACIONAL.png)
+![Modelo Relacional](../Evidencias/MODELO_RELACIONAL.png)
 
 ####  Exemplo de Criação de Tabela
 ```sql
@@ -80,7 +80,7 @@ FROM tb_locacao;
 
 ###  Modelo Dimensional
 
-![Modelo Dimensional](MODELO_DIMENSIONAL.png)
+![Modelo Dimensional](../Evidencias/MODELO_DIMENSIONAL.png)
 
 ####  Exemplo de Criação
 ```sql
