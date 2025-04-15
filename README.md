@@ -79,4 +79,4 @@ Olá! Me chamo **Vinicius Gabriel Stábile da Costa**, tenho **21 anos** e moro 
 ---
 
 ##  Sprints
-1. [Sprint 1](../Compass/Sprint_1/)
+1. [Sprint 1](./Sprint_1/)
