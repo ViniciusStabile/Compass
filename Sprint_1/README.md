@@ -1,194 +1,200 @@
-# Resumo do Curso: SQL para Análise de Dados — Do basico ao avançado
+#  Resumo da Sprint 1 — Fundamentos de SQL e Data & Analytics
 
-## Seção 3: Comandos basicos
-
-- `SELECT`: Seleciona colunas de uma tabela
-- `DISTINCT`: Remove duplicatas nos resultados.
-- `WHERE`: Filtra linhas com base em condições
-- `ORDER BY`: Ordena os resultados por uma ou mais colunas (ascendente ou descendente).
-- `LIMIT`: Restringe o número de linhas retornadas
-
-## Seção 4: Operadores
-
-###  Aritméticos:
-- `+`, `-`, `*`, `/`, `%`, `|`
-
-###  De comparação:
-- `=`, `!=`, `>`, `<`, `>=`, `<=`, `BETWEEN`, `IN`, `LIKE`
-
-### Logicos:
-- `AND`, `OR`, `NOT`
-
-##   Seção 5: Funções agregadas e agrupamentos
-
-- `COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()`
-- `GROUP BY`: Agrupa dados para aplicar funções agregadas .
-- `HAVING`: Filtra os resultados agregados .
-
-##  Seção 6: Joins
-
-- `INNER JOIN`: Retorna registros com correspondencia nas duas tabelas.
-- `LEFT JOIN`: Retorna todos os registros da tabela da esquerda e os correspondentes da direita
-- `RIGHT JOIN`: O oposto do `LEFT JOIN`.
-- `FULL JOIN`: Retorna todos os registros quando há correspondência em uma das tabelas
-
-##  Seção 7: unions
-
-- `UNION`: Combina os resultados de duas ou mais `SELECT`, removendo duplicatas
-- `UNION ALL`: Semelhante ao `UNION`, mas mantem duplicatas
-
-##  Seção 8: Subqueries
-
-- Subconsultas dentro de `SELECT`, `WHERE` ou  `FROM`
-- Permite realizar operações mais complexas e encadeadas
-
-##  Seção 9: Tratamento de Dados
-
-###  Conversão de unidades
-
-- `::numeric`, `::date`, `::text`: Operadores para conversão direta de tipos.
-- `CAST(valor AS tipo)`: Conversão explícita de dados.
-
-
-###  tratamento geral
-
-- `CASE WHEN`: Estrutura condicional para retornar valores diferentes conforme critérios.
-- `COALESCE()`: Retorna o primeiro valor não nulo entre os parâmetros.
-
-
-
-###  Tratamento de Texto
-
-- `LOWER()`: Converte texto para letras minúsculas.
-- `UPPER()`: Converte texto para letras maiúsculas.
-- `TRIM()`: Remove espaços em branco no início e fim de strings.
-- `REPLACE()`: Substitui parte de uma string por outra.
+Durante a Sprint 1, aprofundei meus conhecimentos em **SQL** e conheci os principais fundamentos do mundo de **Data & Analytics**, compreendendo como os dados são estruturados, processados e utilizados para gerar valor nos negócios.
 
 ---
 
-###  Funções de datas
+##  Aprendizado em SQL
 
-- `INTERVAL`: Representa períodos de tempo (ex: `'7 days'::interval`).
-- `DATE_TRUNC()`: Trunca uma data para uma unidade específica (mês, dia, ano...).
-- `EXTRACT()`: Extrai partes de uma data (ano, mês, dia...).
-- `DATEDIFF()`: Calcula a diferença entre duas datas.
+Comecei aprendendo os **comandos básicos** como `SELECT`, `WHERE`, `ORDER BY`, `LIMIT` e `DISTINCT`.
 
-##  Seção 10: Manipulação de tabelas
+Logo depois, estudei os **operadores aritméticos**, **de comparação** e **lógicos**, entendendo como usá-los para montar filtros e expressões mais precisas.
 
-### Tabelas - Criação e deleção
+Com as **funções agregadas** (`SUM`, `AVG`, `COUNT`, etc.) e comandos como `GROUP BY` e `HAVING`, aprendi a gerar análises mais completas.
 
-- **Criação de tabela a partir de uma query**  
-- **Criação de tabela a partir do zero**  
-- **Deleção de tabelas**  
+Também explorei os **JOINS** (`INNER`, `LEFT`, `RIGHT`, `FULL`) e como cruzar dados de tabelas diferentes, além de utilizar **UNION** e **subqueries** para consultas mais avançadas.
 
-###  Linhas - Inserção, atualização e deleção
+Aprofundei também o uso de **funções de conversão**, **condicionais**, **tratamento de texto** e **manipulação de datas**, além de entender como **inserir, atualizar e excluir dados e tabelas** com segurança.
 
-- **Inserção de linhas**  
-- **Atualização de linhas**  
-- **Deleção de linhas**  
+---
 
+##  Fundamentos de Data & Analytics
 
-# Resumo do Curso: Data & Analytics I
+Com os materiais de Data & Analytics, tive uma visão mais ampla e estratégica do mundo dos dados.
 
-## 1. Big Data
-- Volume massivo de dados gerado diariamente.
-- Definido pelos 3Vs (Volume, Velocidade, Variedade), depois ampliado com Variabilidade e Complexidade.
-- Tecnologias como Hadoop e Spark facilitaram o crescimento do Big Data.
-- Big Data permite insights que ajudam na redução de custos , otimizaçao e prevenção de fraudes.
+Aprendi o que é **Big Data** e seus 5Vs (Volume, Velocidade, Variedade, Variabilidade e Complexidade), além da importância do **Hadoop**, **Spark** e **bancos NoSQL**.
 
-## 2. Ciência de Dados
-- Area interdisciplinar que une estatística, computaçao e negócios.
-- Foco em extrair insights de dados .
-- Envolve Big Data , machine learning, bancos de dados e visualizaçao .
+Compreendi a diferença entre **dados estruturados, semiestruturados e não estruturados**, e o papel do **Data Lake** como repositório flexível de dados brutos.
 
-## 3. Papéis em Projetos de Dados
-- **Cientista de Dados:** analisa e modela os dados.
-- **Engenheiro de Dados:** constroi pipelines e estrutura o armazenamento.
-- **Arquiteto de soluções:** define a arquitetura de dados.
-- **Desenvolvedor:** implementa soluçoes com foco técnico.
+Estudei também o funcionamento de **Data Warehouses**, a **modelagem dimensional** com tabelas fato e dimensão, e os tipos de atualização histórica com **SCDs**.
 
-**Modelagem relacional e dimensional:** Pude entender como funciona isso e aquilo.
+Aprofundei ainda os conceitos de **processamento de dados** (Batch e Stream), e entendi como o **BI**, a **mineração de dados**, o **Machine Learning** e o uso de **APIs** ajudam a transformar dados em valor.
 
-## 4. Tipos de Dados
-- **Estruturados:** organizados (ex: bancos de dados).
-- **Semiestruturados:** com marcações flexíveis (ex: XML, JSON).
-- **Não estruturados:** livres e variados (ex: videos, audios, redes sociais).
+---
 
-## 5. Bancos de Dados
-- **Relacionais (RDBMS):** estruturados, com SQL e propriedades ACID.
-- **OLAP:** otimizado para realização de seleção/extração de dados ou de grande volume de dados
-- **OLTP:**  otimizado para registrar transações.
-- **NoSQL:** flexíveis, com tipos como chave-valor, grafos e documentos.
+#  Desafio
 
-## 6. Formatos de Armazenamento
-- **Texto:** TXT, CSV
-- **Semiestruturados:** XML, JSON
-- **Binários e eficientes:** AVRO, PARQUET, ORC
+- O arquivo desenvolvido e utilizado para a realização do desafio desta sprint está disponível na pasta Desafio, e a documentação completa pode ser consultada em seu respectivo `README.md`:
+  - 📂 [Pasta Desafio](../Sprint_1/Desafio/)
+  - 📄 [README.md do Desafio](../Sprint_1/Desafio/README.md)
 
-## 7. Data Lake e Arquitetura Lambda
-- Armazena dados em estado bruto com flexibilidade.
-- **Lambda Architecture:** combina três camadas:
-  - **Batch Layer:** dados históricos.
-  - **Speed Layer:** dados em tempo real.
-  - **Serving Layer:** entrega de dados processados
+---
 
+#  Exercícios
 
-# Resumo: Conceitos de Data & Analytics II
+A seguir, os links para os exercícios realizados durante esta sprint, com suas respectivas evidências:
 
-## 1. Tecnicas de Processamento de Dados
+1. [Exercício 1](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex1.sql)  
+2. [Exercício 2](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex2.sql)  
+3. [Exercício 3](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex3.sql)  
+4. [Exercício 4](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex4.sql)  
+5. [Exercício 5](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex5.sql)  
+6. [Exercício 6](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex6.sql)  
+7. [Exercício 7](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex7.sql)  
+8. [Exercício 8](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex8.sql)  
+9. [Exercício 9](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex9.sql)  
+10. [Exercício 10](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex10.sql)  
+11. [Exercício 11](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex11.sql)  
+12. [Exercício 12](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex12.sql)  
+13. [Exercício 13](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex13.sql)  
+14. [Exercício 14](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex14.sql)  
+15. [Exercício 15](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex15.sql)  
+16. [Exercício 16](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex16.sql) 
 
-- **Batch Processing:** processa dados em blocos armazenados (ex: ETL).
-- **Stream Processing:** processa dados em tempo real conforme chegam.
+17. [Exercício exportação de dados](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20II/exportação_dados_1.sql)
+- Arquivo `CSV` do Exercício 17: [Arquivo CSV](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20II/exportação_dados_1.csv)
 
-## 2. Business Intelligence (BI)
+18. [Exercício exportação de dados](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20II/exportação_dados_2.sql)
+- Arquivo `CSV` do Exercício 18: [Arquivo CSV](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20II/exportação_dados_2.csv)
 
-- Conjunto de praticas e ferramentas para analise e tomada de decisão.
-- Engloba relatorios, dashboards, análises preditivas e prescritivas.
+### [Link para pasta de Exercicios](../Sprint_1/Exercicios/)
 
-## 3. Data Warehouse (DW)
+#  Evidencias
 
-- Repositório centralizado para analise de dados.
-- Utiliza **modelagem dimensional** (Tabelas Fato e Dimensão).
-- Inclui **Data Marts** (subconjuntos focados por área).
-- **SCD (Slowly Changing Dimension):**
-  - Tipo 1: sobrescreve
-  - Tipo 2: cria novo registro (histórico)
-  - Tipo 3: novo campo
-  - Tipo 6: híbrido
+ seguir são apresentadas as evidências dos exercícios realizados durante esta sprint:
 
-## 4. Mineração de Dados
+###  Exercício 1
 
-- Técnica para descobrir padrões e correlações em grandes volumes de dados.
-- Usa estatística, machine learning e IA.
+Neste exercício, desenvolvi uma query para listar **todos os livros publicados após 2014**, ordenando os resultados pela coluna `cod`. A query utiliza a cláusula `WHERE` para filtrar as datas a partir de 2015:
 
-## 5. Machine Learning
+![Exercício 1](../Sprint_1/Exercicios/Imagens_Execucao/ex1sql.png)
 
-- Área da IA que permite que algoritmos aprendam com dados.
-- Tipos:
-  - **Supervisionado:** aprende com dados rotulados (ex: classificação).
-  - **Não-supervisionado:** encontra padrões em dados não rotulados (ex: clusterização).
-  - **Semi-supervisionado:** mistura os dois anteriores.
-  - **Reforço:** aprende por tentativa e erro (ex: jogos, robótica).
+---
 
-## 6. Deep Learning
+###  Exercício 2
 
-- Subárea do ML baseada em redes neurais profundas.
-- Usado para: reconhecimento de voz, imagem, texto e previsões.
+Neste exercício, a query retorna os 10 livros mais caros, ordenando pela coluna `valor` de forma decrescente. Resultado obtido com sucesso:
 
-## 7. Relatórios
+![Exercício 2](../Sprint_1/Exercicios/Imagens_Execucao/ex2sql.png)
 
-- Documentos organizados para comunicar dados e insights.
-- Não são apenas gráficos, mas análises direcionadas a um público específico.
+---
 
-## 8. Dashboards
+###  Exercício 3
 
-- Painéis interativos com KPIs, métricas e gráficos.
-- Conectam-se a APIs, arquivos e bancos para visualização em tempo real.
+Aqui foi necessário listar as 5 editoras com mais livros na biblioteca, usando `LEFT JOIN` e `GROUP BY`. A imagem abaixo mostra o resultado correto:
 
-## 9. Internet das Coisas (IoT)
+![Exercício 3](../Sprint_1/Exercicios/Imagens_Execucao/ex3sql.png)
 
-- Dispositivos físicos conectados que coletam e transmitem dados em tempo real.
-- Ex: sensores, câmeras, eletrodomésticos.
+---
 
+###  Exercício 4
 
+Neste exercício, apresentamos a quantidade de livros por autor, utilizando `LEFT JOIN` e `GROUP BY`. Resultado conforme esperado:
 
+![Exercício 4](../Sprint_1/Exercicios/Imagens_Execucao/ex4sql.png)
+
+---
+
+###  Exercício 5
+
+A query listou autores que publicaram por editoras **fora da região sul** do Brasil, utilizando `NOT IN` na cláusula `WHERE`:
+
+![Exercício 5](../Sprint_1/Exercicios/Imagens_Execucao/ex5sql.png)
+
+---
+
+###  Exercício 6
+
+Neste exercício, filtramos o autor com **maior número de livros publicados**, utilizando `ORDER BY DESC` com `LIMIT 1`:
+
+![Exercício 6](../Sprint_1/Exercicios/Imagens_Execucao/ex6sql.png)
+
+---
+
+###  Exercício 7
+
+Por fim, foi solicitado listar os autores **sem publicações**, utilizando `FULL JOIN` e `ISNULL`:
+
+![Exercício 7](../Sprint_1/Exercicios/Imagens_Execucao/ex7sql.png)
+
+###  Exercício 8
+
+A query foi construída para retornar o **código e nome do vendedor com maior número de vendas concluídas**, utilizando `LEFT JOIN`, `GROUP BY`, `ORDER BY` e `LIMIT`:
+
+![Exercício 8](../Sprint_1/Exercicios/Imagens_Execucao/ex8sql.png)
+
+---
+
+###  Exercício 9
+
+Neste exercício, foi solicitado listar o **produto mais vendido** entre duas datas específicas, com status “Concluído”. A query filtra por `BETWEEN` e agrupa por nome do produto:
+
+![Exercício 9](../Sprint_1/Exercicios/Imagens_Execucao/ex9sql.png)
+
+---
+
+###  Exercício 10
+
+Aqui calculei a **comissão de cada vendedor** com base na soma do valor total de vendas multiplicado pelo percentual de comissão, usando `ROUND` para formatar o resultado:
+
+![Exercício 10](../Sprint_1/Exercicios/Imagens_Execucao/ex10sql.png)
+
+---
+
+###  Exercício 11
+
+A query retorna o **cliente com maior gasto** na loja, somando o total gasto por cliente e ordenando de forma decrescente:
+
+![Exercício 11](../Sprint_1/Exercicios/Imagens_Execucao/ex11sql.png)
+
+---
+
+###  Exercício 12
+
+Foi solicitado listar os **dados dos dependentes do vendedor com menor valor total em vendas**, utilizando múltiplos `JOINs` e `GROUP BY` com ordenação crescente:
+
+![Exercício 12](../Sprint_1/Exercicios/Imagens_Execucao/ex12sql.png)
+
+---
+
+###  Exercício 13
+
+Neste exercício, identifiquei os **10 produtos menos vendidos** por canais específicos (E-Commerce ou Matriz), agrupando e somando as quantidades vendidas:
+
+![Exercício 13](../Sprint_1/Exercicios/Imagens_Execucao/ex13sql.png)
+
+---
+
+###  Exercício 14
+
+A query calcula o **gasto médio por estado da federação**, com os dados de vendas concluídas e média arredondada para duas casas decimais:
+
+![Exercício 14](../Sprint_1/Exercicios/Imagens_Execucao/ex14sql.png)
+
+---
+
+###  Exercício 15
+
+Aqui foi necessário **listar os códigos de vendas deletadas**, ordenando os resultados de forma crescente:
+
+![Exercício 15](../Sprint_1/Exercicios/Imagens_Execucao/ex15sql.png)
+
+---
+
+###  Exercício 16
+
+Por fim, a query retorna a **quantidade média vendida de cada produto agrupada por estado**, com resultado arredondado na quarta casa decimal e ordenação dupla:
+
+![Exercício 16](../Sprint_1/Exercicios/Imagens_Execucao/ex16sql.png)
+
+### [Link para pasta de Imagens Execucao](../Sprint_1/Exercicios/Imagens_Execucao/)
