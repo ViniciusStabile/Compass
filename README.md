@@ -1,6 +1,6 @@
 #  Apresentação
 <p align="center">
-  <img src="./FotoPerfil.jpeg" alt="Foto de Vinicius Gabriel Stábile da Costa" width="200" style="border-radius: 10px;">
+  <img src="./img/FotoPerfil.jpeg" alt="Foto de Vinicius Gabriel Stábile da Costa" width="200" style="border-radius: 10px;">
 </p>
 
 Olá! Me chamo **Vinicius Gabriel Stábile da Costa**, tenho **21 anos** e moro em **São José dos Campos - SP**. Atualmente, sou estudante de **Ciência da Computação** na **Universidade Paulista (UNIP)**, estando no **7º semestre** da graduação.
@@ -25,21 +25,21 @@ Olá! Me chamo **Vinicius Gabriel Stábile da Costa**, tenho **21 anos** e moro 
 ##  Conhecimentos Técnicos
 
 ###  Linguagens e Bibliotecas
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-76B900?style=flat&logo=seaborn&logoColor=white)
-![Java](https://img.shields.io/badge/Java-007396?style=flat&logo=java&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=spring-boot&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
+![Python](./img/PYTHON.svg)
+![Pandas](./img/PANDAS.svg)
+![NumPy](./img/NUMPY.svg)
+![Seaborn](./img/SEABORN.svg)
+![Java](./img/JAVA.svg)
+![Spring Boot](./img/SPRING.svg)
+![Git](./img/GIT.svg)
+![Jupyter](./img/JUPYTER.svg)
 
 ###  Banco de Dados
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
-![NoSQL](https://img.shields.io/badge/NoSQL-CC0000?style=flat&logo=databricks&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
+![MySQL](./img/MYSQL.svg)
+![PostgreSQL](./img/POSTGRESQL.svg)
+![SQLite](./img/SQLITE.svg)
+![NoSQL](./img/NOSQL.svg)
+![MongoDB](./img/MONGODB.svg)
 
 ###  APIs
 - RESTful APIs
