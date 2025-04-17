@@ -61,11 +61,11 @@ A seguir, os links para os exercícios realizados durante esta sprint, com suas 
 15. [Exercício 15](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex15.sql)  
 16. [Exercício 16](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20I/ex16.sql) 
 
-17. [Exercício exportação de dados](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20II/exportação_dados_1.sql)
-- Arquivo `CSV` do Exercício 17: [Arquivo CSV](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20II/exportação_dados_1.csv)
+17. [Exercício exportação de dados](./Exercicios/Linguagem_SQL_EXERCICIOS_2/exportação_dados_1.sql)
+- Arquivo `CSV` do Exercício 17: [Arquivo CSV](./Exercicios/Linguagem_SQL_EXERCICIOS_2/exportação_dados_1.csv)
 
-18. [Exercício exportação de dados](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20II/exportação_dados_2.sql)
-- Arquivo `CSV` do Exercício 18: [Arquivo CSV](../Sprint_1/Exercicios/Linguagem%20SQL%20-%20EXERCICIOS%20II/exportação_dados_2.csv)
+18. [Exercício exportação de dados](./Exercicios/Linguagem_SQL_EXERCICIOS_2/exportação_dados_2.sql)
+- Arquivo `CSV` do Exercício 18: [Arquivo CSV](./Exercicios/Linguagem_SQL_EXERCICIOS_2/exportação_dados_2.csv)
 
 ### [Link para pasta de Exercicios](../Sprint_1/Exercicios/)
 
@@ -198,3 +198,12 @@ Por fim, a query retorna a **quantidade média vendida de cada produto agrupada 
 ![Exercício 16](../Sprint_1/Exercicios/Imagens_Execucao/ex16sql.png)
 
 ### [Link para pasta de Imagens Execucao](../Sprint_1/Exercicios/Imagens_Execucao/)
+
+---
+
+##  Caminhos para as pastas da Sprint
+
+- [ Certificados](./Certificados/)
+- [ Desafio](./Desafio/)
+- [ Evidências](./Evidencias/)
+- [ Exercícios](./Exercicios/)
