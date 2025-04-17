@@ -56,7 +56,7 @@ FROM tb_locacao;
 ```
 *Inserção de dados distintos a partir da tabela `tb_locacao`, evitando duplicações.*
 
- **Scripts completos disponíveis em:** [`etapa-1`](./etapa-1/)
+ **Scripts completos disponíveis em:** [`etapa-1`](./etapa_1/)
 
 ---
 
@@ -64,48 +64,54 @@ FROM tb_locacao;
 
 ###  Passos Realizados
 
-1. **Criação das tabelas dimensão:**
+1. **Criação das views para as dimensões:**
    - `dimCarro`
    - `dimCliente`
    - `dimVendedor`
    - `dimTempo`
 
-2. **Criação da tabela fato `fatoLocacao`, com as métricas:**
+2. **Criação da view de fato `fatoLocacao`, com as métricas:**
    - `vlrDiaria`
    - `qtdDiaria`
    - `vlrTotal` (`qtdDiaria * vlrDiaria`)
    - `horaLocacao`, `horaEntrega`
 
-3. **Relacionamentos definidos via chaves estrangeiras entre as tabelas.**
-
 ###  Modelo Dimensional
 
 ![Modelo Dimensional](../Evidencias/MODELO_DIMENSIONAL.png)
 
-####  Exemplo de Criação
+####  Exemplo de Criação de View – `dimCliente`
 ```sql
-CREATE TABLE dimCliente(
-    idCliente INT PRIMARY KEY,
-    nomeCliente VARCHAR(100),
-    cidadeCliente VARCHAR(40),
-    estadoCliente VARCHAR(40),
-    paisCliente VARCHAR(40)
-);
+CREATE VIEW dimCliente AS
+SELECT 
+    idCliente,
+    nomeCliente,
+    cidadeCliente,
+    estadoCliente,
+    paisCliente
+FROM Cliente;
 ```
-*Exemplo de criação da tabela `dimCarro`, que representa informações detalhadas do carro. Inclui todos os atributos relevantes e incorpora o tipo de combustível como um campo já resolvido, pronto para análise no modelo dimensional.*
+*Exemplo da view `dimCliente`, representando informações descritivas do cliente no modelo dimensional..*
 
 
-####  Exemplo de Inserção na `dimCarro`
+####  Exemplo de Criação de View – `dimCarro`
 ```sql
-INSERT INTO dimCarro (idCarro, kmCarro, classiCarro, marcaCarro, modeloCarro, anoCarro, tipoCombustivel)
-SELECT DISTINCT idCarro, kmCarro, classiCarro, marcaCarro, modeloCarro, anoCarro, tipoCombustivel
-FROM Carro ca
-INNER JOIN Combustivel co ON ca.idCombustivel = co.idCombustivel;
+CREATE VIEW dimCarro AS
+SELECT 
+    c.idCarro,
+    c.kmCarro,
+    c.classiCarro,
+    c.marcaCarro,
+    c.modeloCarro,
+    c.anoCarro,
+    comb.tipoCombustivel
+FROM Carro c
+JOIN Combustivel comb ON c.idCombustivel = comb.idCombustivel;
 ```
-*Exemplo de inserção na `dimCarro`, utilizando um `INNER JOIN` com a tabela `Combustivel` para trazer o campo `tipoCombustivel`. O uso de `SELECT DISTINCT` garante que apenas registros únicos sejam inseridos, evitando duplicidades na dimensão.*
+*Esta view resolve a relação entre `Carro` e `Combustivel`, apresentando o tipo de combustível diretamente na dimensão para facilitar análises.*
 
 
- **Scripts completos disponíveis em:** [`etapa-2`](./etapa-2/)
+ **Scripts completos disponíveis em:** [`etapa-2`](./etapa_2/)
 
 ---
 
@@ -113,7 +119,7 @@ INNER JOIN Combustivel co ON ca.idCombustivel = co.idCombustivel;
 
 ###  Construção da `dimTempo`
 
-A tabela `dimTempo` foi criada com base nas colunas `dataLocacao` e `dataEntrega`, extraindo atributos temporais úteis para análise.
+A view `dimTempo` foi construida com base nas colunas `dataLocacao` e `dataEntrega`, extraindo atributos temporais úteis para análise.
 
 ####  Extrações com `SUBSTR` + `CAST`
 
