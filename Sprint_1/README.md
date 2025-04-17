@@ -35,8 +35,8 @@ Aprofundei ainda os conceitos de **processamento de dados** (Batch e Stream), e 
 #  Desafio
 
 - O arquivo desenvolvido e utilizado para a realização do desafio desta sprint está disponível na pasta Desafio, e a documentação completa pode ser consultada em seu respectivo `README.md`:
-  - 📂 [Pasta Desafio](../Sprint_1/Desafio/)
-  - 📄 [README.md do Desafio](../Sprint_1/Desafio/README.md)
+  - 📂 [Pasta Desafio](./Desafio/)
+  - 📄 [README.md do Desafio](./Desafio/README.md)
 
 ---
 
@@ -67,7 +67,7 @@ A seguir, os links para os exercícios realizados durante esta sprint, com suas 
 18. [Exercício exportação de dados](./Exercicios/Linguagem_SQL_EXERCICIOS_2/exportação_dados_2.sql)
 - Arquivo `CSV` do Exercício 18: [Arquivo CSV](./Exercicios/Linguagem_SQL_EXERCICIOS_2/exportação_dados_2.csv)
 
-### [Link para pasta de Exercicios](../Sprint_1/Exercicios/)
+### [Link para pasta de Exercicios](./Exercicios/)
 
 #  Evidencias
 
@@ -77,7 +77,7 @@ A seguir, os links para os exercícios realizados durante esta sprint, com suas 
 
 Neste exercício, desenvolvi uma query para listar **todos os livros publicados após 2014**, ordenando os resultados pela coluna `cod`. A query utiliza a cláusula `WHERE` para filtrar as datas a partir de 2015:
 
-![Exercício 1](../Sprint_1/Exercicios/Imagens_Execucao/ex1sql.png)
+![Exercício 1](./Exercicios/Imagens_Execucao/ex1sql.png)
 
 ---
 
@@ -85,7 +85,7 @@ Neste exercício, desenvolvi uma query para listar **todos os livros publicados 
 
 Neste exercício, a query retorna os 10 livros mais caros, ordenando pela coluna `valor` de forma decrescente. Resultado obtido com sucesso:
 
-![Exercício 2](../Sprint_1/Exercicios/Imagens_Execucao/ex2sql.png)
+![Exercício 2](./Exercicios/Imagens_Execucao/ex2sql.png)
 
 ---
 
@@ -93,7 +93,7 @@ Neste exercício, a query retorna os 10 livros mais caros, ordenando pela coluna
 
 Aqui foi necessário listar as 5 editoras com mais livros na biblioteca, usando `LEFT JOIN` e `GROUP BY`. A imagem abaixo mostra o resultado correto:
 
-![Exercício 3](../Sprint_1/Exercicios/Imagens_Execucao/ex3sql.png)
+![Exercício 3](./Exercicios/Imagens_Execucao/ex3sql.png)
 
 ---
 
@@ -101,7 +101,7 @@ Aqui foi necessário listar as 5 editoras com mais livros na biblioteca, usando 
 
 Neste exercício, apresentamos a quantidade de livros por autor, utilizando `LEFT JOIN` e `GROUP BY`. Resultado conforme esperado:
 
-![Exercício 4](../Sprint_1/Exercicios/Imagens_Execucao/ex4sql.png)
+![Exercício 4](./Exercicios/Imagens_Execucao/ex4sql.png)
 
 ---
 
@@ -109,7 +109,7 @@ Neste exercício, apresentamos a quantidade de livros por autor, utilizando `LEF
 
 A query listou autores que publicaram por editoras **fora da região sul** do Brasil, utilizando `NOT IN` na cláusula `WHERE`:
 
-![Exercício 5](../Sprint_1/Exercicios/Imagens_Execucao/ex5sql.png)
+![Exercício 5](./Exercicios/Imagens_Execucao/ex5sql.png)
 
 ---
 
@@ -117,7 +117,7 @@ A query listou autores que publicaram por editoras **fora da região sul** do Br
 
 Neste exercício, filtramos o autor com **maior número de livros publicados**, utilizando `ORDER BY DESC` com `LIMIT 1`:
 
-![Exercício 6](../Sprint_1/Exercicios/Imagens_Execucao/ex6sql.png)
+![Exercício 6](./Exercicios/Imagens_Execucao/ex6sql.png)
 
 ---
 
@@ -125,13 +125,13 @@ Neste exercício, filtramos o autor com **maior número de livros publicados**, 
 
 Por fim, foi solicitado listar os autores **sem publicações**, utilizando `FULL JOIN` e `ISNULL`:
 
-![Exercício 7](../Sprint_1/Exercicios/Imagens_Execucao/ex7sql.png)
+![Exercício 7](./Exercicios/Imagens_Execucao/ex7sql.png)
 
 ###  Exercício 8
 
 A query foi construída para retornar o **código e nome do vendedor com maior número de vendas concluídas**, utilizando `LEFT JOIN`, `GROUP BY`, `ORDER BY` e `LIMIT`:
 
-![Exercício 8](../Sprint_1/Exercicios/Imagens_Execucao/ex8sql.png)
+![Exercício 8](./Exercicios/Imagens_Execucao/ex8sql.png)
 
 ---
 
@@ -139,7 +139,7 @@ A query foi construída para retornar o **código e nome do vendedor com maior n
 
 Neste exercício, foi solicitado listar o **produto mais vendido** entre duas datas específicas, com status “Concluído”. A query filtra por `BETWEEN` e agrupa por nome do produto:
 
-![Exercício 9](../Sprint_1/Exercicios/Imagens_Execucao/ex9sql.png)
+![Exercício 9](./Exercicios/Imagens_Execucao/ex9sql.png)
 
 ---
 
@@ -147,7 +147,7 @@ Neste exercício, foi solicitado listar o **produto mais vendido** entre duas da
 
 Aqui calculei a **comissão de cada vendedor** com base na soma do valor total de vendas multiplicado pelo percentual de comissão, usando `ROUND` para formatar o resultado:
 
-![Exercício 10](../Sprint_1/Exercicios/Imagens_Execucao/ex10sql.png)
+![Exercício 10](./Exercicios/Imagens_Execucao/ex10sql.png)
 
 ---
 
@@ -155,7 +155,7 @@ Aqui calculei a **comissão de cada vendedor** com base na soma do valor total d
 
 A query retorna o **cliente com maior gasto** na loja, somando o total gasto por cliente e ordenando de forma decrescente:
 
-![Exercício 11](../Sprint_1/Exercicios/Imagens_Execucao/ex11sql.png)
+![Exercício 11](./Exercicios/Imagens_Execucao/ex11sql.png)
 
 ---
 
@@ -163,7 +163,7 @@ A query retorna o **cliente com maior gasto** na loja, somando o total gasto por
 
 Foi solicitado listar os **dados dos dependentes do vendedor com menor valor total em vendas**, utilizando múltiplos `JOINs` e `GROUP BY` com ordenação crescente:
 
-![Exercício 12](../Sprint_1/Exercicios/Imagens_Execucao/ex12sql.png)
+![Exercício 12](./Exercicios/Imagens_Execucao/ex12sql.png)
 
 ---
 
@@ -171,7 +171,7 @@ Foi solicitado listar os **dados dos dependentes do vendedor com menor valor tot
 
 Neste exercício, identifiquei os **10 produtos menos vendidos** por canais específicos (E-Commerce ou Matriz), agrupando e somando as quantidades vendidas:
 
-![Exercício 13](../Sprint_1/Exercicios/Imagens_Execucao/ex13sql.png)
+![Exercício 13](./Exercicios/Imagens_Execucao/ex13sql.png)
 
 ---
 
@@ -179,7 +179,7 @@ Neste exercício, identifiquei os **10 produtos menos vendidos** por canais espe
 
 A query calcula o **gasto médio por estado da federação**, com os dados de vendas concluídas e média arredondada para duas casas decimais:
 
-![Exercício 14](../Sprint_1/Exercicios/Imagens_Execucao/ex14sql.png)
+![Exercício 14](./Exercicios/Imagens_Execucao/ex14sql.png)
 
 ---
 
@@ -187,7 +187,7 @@ A query calcula o **gasto médio por estado da federação**, com os dados de ve
 
 Aqui foi necessário **listar os códigos de vendas deletadas**, ordenando os resultados de forma crescente:
 
-![Exercício 15](../Sprint_1/Exercicios/Imagens_Execucao/ex15sql.png)
+![Exercício 15](./Exercicios/Imagens_Execucao/ex15sql.png)
 
 ---
 
@@ -195,9 +195,9 @@ Aqui foi necessário **listar os códigos de vendas deletadas**, ordenando os re
 
 Por fim, a query retorna a **quantidade média vendida de cada produto agrupada por estado**, com resultado arredondado na quarta casa decimal e ordenação dupla:
 
-![Exercício 16](../Sprint_1/Exercicios/Imagens_Execucao/ex16sql.png)
+![Exercício 16](./Exercicios/Imagens_Execucao/ex16sql.png)
 
-### [Link para pasta de Imagens Execucao](../Sprint_1/Exercicios/Imagens_Execucao/)
+### [Link para pasta de Imagens Execucao](./Exercicios/Imagens_Execucao/)
 
 ---
 
