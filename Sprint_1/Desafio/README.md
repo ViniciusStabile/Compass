@@ -97,16 +97,16 @@ FROM Cliente;
 ####  Exemplo de Criação de View – `dimCarro`
 ```sql
 CREATE VIEW dimCarro AS
-SELECT 
-    c.idCarro,
-    c.kmCarro,
-    c.classiCarro,
-    c.marcaCarro,
-    c.modeloCarro,
-    c.anoCarro,
-    comb.tipoCombustivel
-FROM Carro c
-JOIN Combustivel comb ON c.idCombustivel = comb.idCombustivel;
+SELECT DISTINCT 
+    ca.idCarro, 
+    ca.kmCarro, 
+    ca.classiCarro, 
+    ca.marcaCarro, 
+    ca.modeloCarro, 
+    ca.anoCarro, 
+    co.tipoCombustivel
+FROM Carro ca
+INNER JOIN Combustivel co ON ca.idCombustivel = co.idCombustivel;
 ```
 *Esta view resolve a relação entre `Carro` e `Combustivel`, apresentando o tipo de combustível diretamente na dimensão para facilitar análises.*
 
