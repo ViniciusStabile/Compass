@@ -56,7 +56,7 @@ FROM tb_locacao;
 ```
 *Inserção de dados distintos a partir da tabela `tb_locacao`, evitando duplicações.*
 
- **Scripts completos disponíveis em:** [`etapa-1`](./etapa_1/)
+ **Scripts completos disponíveis em:** [`etapa_1`](./etapa_1/)
 
 ---
 
@@ -111,7 +111,7 @@ JOIN Combustivel comb ON c.idCombustivel = comb.idCombustivel;
 *Esta view resolve a relação entre `Carro` e `Combustivel`, apresentando o tipo de combustível diretamente na dimensão para facilitar análises.*
 
 
- **Scripts completos disponíveis em:** [`etapa-2`](./etapa_2/)
+ **Scripts completos disponíveis em:** [`etapa_2`](./etapa_2/)
 
 ---
 

@@ -1,4 +1,4 @@
-CREATE VIEW vw_dimCarro AS
+CREATE VIEW dimCarro AS
 SELECT DISTINCT 
     ca.idCarro, 
     ca.kmCarro, 
@@ -48,7 +48,7 @@ SELECT DISTINCT
     
 FROM locacao;
 
-CREATE VIEW vw_fatoLocacao AS
+CREATE VIEW fatoLocacao AS
 SELECT
     idLocacao,
     dataLocacao,
