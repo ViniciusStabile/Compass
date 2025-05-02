@@ -107,16 +107,18 @@ A seguir, os links para os exercícios realizados durante esta sprint, com suas 
 21. [Resposta Ex21.](./Exercicios/Exercicios_Avancados_2/ex21.py)
 22. [Resposta Ex22.](./Exercicios/Exercicios_Avancados_2/ex22.py)
 23. [Resposta Ex23.](./Exercicios/Exercicios_Avancados_2/ex23.py)
-24.
+24. [Resposta Ex24.](./Exercicios/Exercicios_Avancados_2/ex24.py)
 25. [Resposta Ex25.](./Exercicios/Exercicios_Avancados_2/ex25.py)
 26. [Resposta Ex26.](./Exercicios/Exercicios_Avancados_2/ex26.py)
 
 ## Exercício ETL
 
-
-
-
-
+ETL. [Exercício ETL.](./Exercicios/Exercicios_ETL/ex_ETL.py)
+1. [Resposta 1.](./Exercicios/Exercicios_ETL/etapa-1.txt)
+2. [Resposta 2.](./Exercicios/Exercicios_ETL/etapa-2.txt)
+3. [Resposta 3.](./Exercicios/Exercicios_ETL/etapa-3.txt)
+4. [Resposta 4.](./Exercicios/Exercicios_ETL/etapa-4.txt)
+5. [Resposta 5.](./Exercicios/Exercicios_ETL/etapa-5.txt)
 # Evidências
 
 
