@@ -3,7 +3,9 @@
 O objetivo deste desafio é a prática de Python combinando conhecimentos adquiridos no PB
 
 ---
+O notebook completo esta em [`etapa_2`](./etapa-2/Desafio.ipynb)
 
+---
 ##  Estrutura do Projeto
 
 - **Dataset**: `googleplaystore.csv`
