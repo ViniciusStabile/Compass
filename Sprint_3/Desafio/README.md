@@ -189,6 +189,12 @@ CMD ["python", "etl.py"]
 - Executa o script etl.py com o interpretador Python, dando início ao processo de ETL.
 
 ---
+conteúdo do `requirements.txt`
+```txt
+pandas==2.2.3
+```
+- pandas: Biblioteca utilizada para manipulação e análise de dados, facilitando operações em tabelas, limpeza e transformações.
+---
 
 ###  Resultado Final do CSV Limpo
 
@@ -445,6 +451,15 @@ CMD ["python", "job.py"]
 ```
 - Define o comando padrão que será executado quando o container iniciar.
 - Executa o script job.py com o interpretador Python, dando início ao processo de ETL.
+
+---
+Conteúdo do `requirements.txt`
+```txt
+pandas==2.2.3
+matplotlib==3.10.1
+```
+- pandas: Biblioteca utilizada para manipulação e análise de dados, facilitando operações em tabelas, limpeza e transformações.
+- matplotlib: Biblioteca usada para criação de gráficos e visualizações dos dados processados.
 
 ---
 

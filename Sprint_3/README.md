@@ -13,6 +13,13 @@ Durante a Sprint 3, aprofundei meus conhecimentos em Docker, desde conceitos bá
 
 ## AWS Partner: Accreditation
 
+- Uso do AWS Cloud Adoption Framework (CAF) para orientar clientes na jornada para a nuvem.
+- Importância da descoberta e análise do ambiente atual de TI antes de definir a estratégia de migração.
+- Avaliação de fatores técnicos, objetivos de negócio, criticidade e impacto das aplicações.
+- ompreensão das 7 estratégias de migração da AWS
+- Uso combinado de estratégias, adaptando para as necessidades específicas de cada cliente
+- Envolvimento de stakeholders e coleta de dados críticos para decisões de migração bem fundamentadas.
+
 
 #  Desafio
 
