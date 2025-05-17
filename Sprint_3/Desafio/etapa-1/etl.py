@@ -25,7 +25,7 @@ def limpar_coluna_texto(df, *nomes_colunas):
     """
     for nome_coluna in nomes_colunas:
         df[nome_coluna] = df[nome_coluna].str.replace(
-            r'\[[^\]]*\]', '', regex=True).str.replace(r'[^a-zA-Z0-9 ]', '', regex=True)
+            r'\[[^\]]*\]', '', regex=True).str.replace(r'[^a-zA-Z0-9 ]', '', regex=True).str.strip()
     return df
 
 

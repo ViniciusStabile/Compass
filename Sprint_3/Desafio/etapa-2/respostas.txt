@@ -8,6 +8,6 @@ A turnê que aconteceu dentro de um ano a que teve a maior média de faturamento
 
 Q3:
 Top 3 shows unitários mais lucrativos:
-- Turnê 'The Eras Tour ' do(a) artista Taylor Swift, com valor por show de $13,928,571.43
+- Turnê 'The Eras Tour' do(a) artista Taylor Swift, com valor por show de $13,928,571.43
 - Turnê 'Renaissance World Tour' do(a) artista Beyoncé, com valor por show de $10,353,571.43
 - Turnê 'Reputation Stadium Tour' do(a) artista Taylor Swift, com valor por show de $7,600,846.21 
