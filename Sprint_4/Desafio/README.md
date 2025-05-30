@@ -80,6 +80,8 @@ Fiz a criação do bucket no S3 via console do s3
 
 ![imagem bucket](../Evidencias/df_bucket.png)
 
+
+Conexão com AWS S3 via perfil SSO (configurado com `aws configure sso`)
 ```python
 try:
     session = boto3.Session(profile_name='compass-sso')
