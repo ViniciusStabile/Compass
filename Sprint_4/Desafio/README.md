@@ -12,7 +12,7 @@ O objetivo deste desafio é a pratica utilizando serviços AWS
 
 - **Dataset**: `bolsa_familia_2024.csv`
 - **Ferramentas Utilizadas**:
-  - Python 3.11
+  - Python 
   - Pandas
   - Matplotlib
   - Boto3
