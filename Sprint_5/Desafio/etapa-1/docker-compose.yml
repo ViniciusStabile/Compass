@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  uploader:
+    build: .
+    container_name: uploader-s3
+    volumes:
+      - ~/.aws:/root/.aws # Monta credenciais AWS
+      - ../dados:/app/dados # Monta os arquivos CSV do projeto
+    working_dir: /app
+    command: python main.py
