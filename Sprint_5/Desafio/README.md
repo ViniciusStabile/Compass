@@ -422,16 +422,16 @@ filme_detalhado = {
     "vote_count": data.get("vote_count"),
 }
 ```
-`id`:	ID do TMDB — serve como chave primária do filme.
-`imdb_id`:	Permite fazer junções futuras com o CSV original.
-`title`:	Preenche títulos ausentes ou confirma possíveis divergências no CSV.
-`runtime`:	Enriquece o dataset com a duração exata do filme (Alguns não disponíveis no CSV).
-`release_date`:	Fornece a data completa de lançamento (CSV original só contém o ano).
-`budget`:	Utilizado para cálculo de ROI e análises financeiras.
-`revenue`:	Utilizado para entender a rentabilidade bruta do filme.
-`popularity`:	Métrica de interesse do público na plataforma TMDB.
-`vote_average`:	Nota média recebida — usada para análises de qualidade/percepção.
-`vote_count`:	Volume de votos — indicador de popularidade e confiabilidade da média.
+- `id`:	ID do TMDB — serve como chave primária do filme.
+- `imdb_id`:	Permite fazer junções futuras com o CSV original.
+- `title`:	Preenche títulos ausentes ou confirma possíveis divergências no CSV.
+- `runtime`:	Enriquece o dataset com a duração exata do filme (Alguns não disponíveis no CSV).
+- `release_date`:	Fornece a data completa de lançamento (CSV original só contém o ano).
+- `budget`:	Utilizado para cálculo de ROI e análises financeiras.
+- `revenue`:	Utilizado para entender a rentabilidade bruta do filme.
+- `popularity`:	Métrica de interesse do público na plataforma TMDB.
+- `vote_average`:	Nota média recebida — usada para análises de qualidade/percepção.
+- `vote_count`:	Volume de votos — indicador de popularidade e confiabilidade da média.
 
 ---
 Para que o código funcionasse corretamente na AWS Lambda, foi necessário criar uma **Layer personalizada** contendo as bibliotecas externas utilizadas:
