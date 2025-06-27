@@ -51,6 +51,8 @@ O código responsável por realizar o exercicio **Geração e massa de dados** e
  [`Resultado_animais`](./Exercicios/exercicio_1/animais.txt)
  [`Resultado_nomes`](./Exercicios/exercicio_1/nomes_aleatorios.txt)
 
+---
+
 ## Etapas Realizadas Exercicio 1 - parte 2 
 
 1. Fiz a leitura do arquivo `nomes_aleatorios.txt` e fiz um print das 5 primeiras linhas.
@@ -65,41 +67,134 @@ O código responsável por realizar o exercicio **Geração e massa de dados** e
 10. Usando `Spark SQL` obtive a quantidade de pessoas de cada pais para cada uma das seguintes gerações(`Baby Boomers`,`Geração X`,`Millennials`,`Geração Z`)
 
 O código completo esta em 
-[`notebook`](./Exercicios/exercicio_2/)
----
-##  Evidências exercicio 1
-
-###  Container Spark em execução
-![Container em execução](./Exercicios/Imagens_Execucao/container_running.png)
+[`notebook`](./Exercicios/exercicio_2/parte_2.ipynb)
 
 ---
 
-###  Download do arquivo README.md com autenticação
-![Comando WGET com token](./Exercicios/Imagens_Execucao/WGET.png)
+## Lab AWS GLUE
+
+1. Criei uma IAM Role para os jobs
+2. Configurei minha conta para rodar o glue 
+3. Fiz a leitura do arquivo nomes.csv no S3
+4. Imrpimi o schema do dataframe gerado no passo anterior
+5. Alterei a caixa dos valores da coluna nome para MAISCULO
+6. Imprimi a contagem de linhas presente no DF
+7. Imrpimi a contagem de nomes,agrupando os dados pelas colunas ano e sexo.
+8. Mostrei o nome feminino com mais registros e o ano em que ocorreu.
+9. Mostrei o nome masculino com mais registros e o ano em que ocorreu.
+10. Apresentei o total de registros (masculinos e femininos) para cada ano presente no dataframe.
+11. Salvei o arquivo no s3 novamente.
+12. Criei um Crawler.
+13. Fiz um Select no athena.
+
+o codigo utilizado esta em [`script`](./Exercicios/Lab%20Glue/lab.py)
+---
+##  Evidências exercicio 1 - parte 1
+
+###  Resultado numeros aleatorios
+![Resultado numeros aleatorios](./Exercicios/Imagens_Execucao/01.png)
 
 ---
+###  Print lista animais
+![Print lista animais](./Exercicios/Imagens_Execucao/02.png)
 
-###  Inicialização do PySpark no container
-![Inicialização do PySpark](./Exercicios/Imagens_Execucao/spark_iniciando.png)
+--- 
 
----
-
-###  Comandos PySpark para contagem de palavras
-![Comandos PySpark](./Exercicios/Imagens_Execucao/comandos.png)
-
----
-
-###  Resultado da contagem de palavras no README.md
-![Resultado da contagem](./Exercicios/Imagens_Execucao/resultado.png)
+###  Nomes gerado com sucesso
+![Nomes gerado com sucesso](./Exercicios/Imagens_Execucao/03.png)
 
 ---
-##  Evidência exercicio 2
+##  Evidências exercicio 1 - parte 2
 
-### Retorno da api
-![Retorno da ape](./Exercicios/Imagens_Execucao/retorno_api.png)
+###  Etapa 1  - Leitura do arquivo 
+![Etapa 1 - Leitura](./Exercicios/Imagens_Execucao/1.png)
+---
+###  Etapa 2  - Renomeando coluna 
+![Etapa 2 - Recomeando coluna](./Exercicios/Imagens_Execucao/2.png)
+---
+###  Etapa 3 - Adição da coluna "Escolaridade"
+![Etapa 3 - Escolaridade](./Exercicios/Imagens_Execucao/3.png)
+---
+###  Etapa 4 - Adição da coluna "Pais"
+![Etapa 4 - Pais](./Exercicios/Imagens_Execucao/4.png)
+---
+###  Etapa 5 - Adição da coluna "AnoNascimento"
+![Etapa 5 - AnoNascimento](./Exercicios/Imagens_Execucao/5.png)
+---
+###  Etapa 6 - Filtro de pessoas nascidas a partir de 2001
+![Etapa 6 - Filtro século atual](./Exercicios/Imagens_Execucao/6.png)
+---
+###  Etapa 7 - Mesmo filtro utilizando Spark SQL
+![Etapa 7 - Spark SQL](./Exercicios/Imagens_Execucao/7.png)
+---
+###  Etapa 8 - Contagem de Millennials com `.filter()`
+![Etapa 8 - Filter](./Exercicios/Imagens_Execucao/8.png)
+---
+###  Etapa 9 - Contagem de Millennials com Spark SQL
+![Etapa 9 - SQL](./Exercicios/Imagens_Execucao/9.png)
+---
+###  Etapa 10 - Agrupamento por Geração e País com Spark SQL
+![Etapa 10 - Agrupamento por geração](./Exercicios/Imagens_Execucao/10.png)
 
 ---
+##  Evidências Lab
 
+###  CSV nomes no bucket do S3
+![CSV nomes no bucket do S3](./Exercicios/Imagens_Execucao/nomes_no_s3.png)
+
+---
+###  Impressão do schema do DataFrame
+![Schema do DataFrame](./Exercicios/Imagens_Execucao/schema.png)
+
+---
+###  Total de registros no S3
+![Total de registros no S3](./Exercicios/Imagens_Execucao/total_registros.png)
+
+---
+###  Agrupamento por ano e sexo (ordem decrescente de ano)
+![Agrupamento por ano e sexo](./Exercicios/Imagens_Execucao/ano_sexo.png)
+
+---
+### Nome feminino com maior número de registros
+![Nome feminino mais frequente](./Exercicios/Imagens_Execucao/feminino.png)
+
+---
+### Nome Masculino com maior número de registros
+![Nome masculino mais frequente](./Exercicios/Imagens_Execucao/masculino.png)
+
+---
+### Total de registros (masculinos e femininos) por ano - Top 10
+![Top 10 totais por ano](./Exercicios/Imagens_Execucao/total_2.png)
+
+---
+### Job executado com sucesso
+![Job executado com sucesso](./Exercicios/Imagens_Execucao/job.png)
+
+---
+### Pastas separada por sexo
+![Pastas separada por sexo](./Exercicios/Imagens_Execucao/sexo.png)
+
+---
+### Pastas feminina
+![Pastas feminina](./Exercicios/Imagens_Execucao/feminina_1.png)
+
+---
+### Pastas masculina
+![Pastas masculina](./Exercicios/Imagens_Execucao/masculina_1.png)
+
+---
+### Crawler criado
+![Crawler criado](./Exercicios/Imagens_Execucao/crawler_1.png)
+
+---
+### Crawler executado com sucesso
+![Crawler executado com sucesso](./Exercicios/Imagens_Execucao/crawler_2.png)
+
+---
+### Consulta no athena
+![Consulta no athena](./Exercicios/Imagens_Execucao/athena.png)
+
+---
 ### [Link para pasta de Imagens Execucao](./Exercicios/Imagens_Execucao)
 
 ##  Caminhos para as pastas da Sprint
