@@ -61,7 +61,7 @@ df_tmdb = df_tmdb.filter(
 ).withColumn("roi", F.round((F.col("revenue") - F.col("budget")) / F.col("budget"), 1)) \
  .filter("roi > 0")
 
-# Renomeia a coluna id para id_filmes
+# Renomeia a coluna id para id_tmdb
 df_tmdb = df_tmdb.withColumnRenamed("id", "id_filme")
 
 # Realiza o join entre os dados do TMDB e IMDb usando o imdb_id como chave
@@ -71,9 +71,7 @@ df_geral = df_tmdb.join(df_local, df_tmdb.imdb_id == df_local.id, "inner")
 df_geral = df_geral.select(
     F.col("id_filme"),
     F.col("imdb_id"),
-    F.col("title").alias("titulo_no_brasil"),
     F.col("tituloPrincipal").alias("titulo_principal"),
-    F.col("tituloOriginal").alias("titulo_original"),
     F.col("release_date").alias("data_lancamento"),
     F.col("numeroVotos").alias("qtd_votos_imdb"),
     F.col("notaMedia").alias("nota_media_imdb"),
@@ -100,19 +98,19 @@ df_data = df_geral.select(F.col("data_lancamento")).distinct()
 df_data = df_data.withColumn("ano", F.year("data_lancamento")) \
     .withColumn("mes", F.month("data_lancamento")) \
     .withColumn("dia", F.dayofmonth("data_lancamento")) \
-    .withColumn("trimestre", F.when(F.month("data_lancamento").isin([1, 2, 3]), "T1")
-                .when(F.month("data_lancamento").isin([4, 5, 6]), "T2")
-                .when(F.month("data_lancamento").isin([7, 8, 9]), "T3")
+    .withColumn("trimestre", F.when(F.col("mes").isin([1, 2, 3]), "T1")
+                .when(F.col("mes").isin([4, 5, 6]), "T2")
+                .when(F.col("mes").isin([7, 8, 9]), "T3")
                 .otherwise("T4")) \
     .withColumn("decada", (F.col("ano") / 10).cast("int") * 10) \
-    .withColumn("id_data", F.monotonically_increasing_id()) \
+    .withColumn("id_data", (F.date_format("data_lancamento", "yyyyMMdd")).cast("int")) \
     .select("id_data", "data_lancamento", "ano", "mes", "dia", "trimestre", "decada")
 
 # ============================
 # Criação da dimensão de filmes
 # ============================
 df_filmes = df_geral.select(
-    "id_filme", "imdb_id", "titulo_no_brasil", "titulo_principal", "titulo_original"
+    "id_filme", "imdb_id", "titulo_principal"
 ).distinct()
 
 # ============================
@@ -126,31 +124,24 @@ df_fato = df_geral.select(
     "data_lancamento", "nome_artista"
 )
 
-# Realiza o join com as dimensões de artista e data para obter id_artista e id_data
+# Realiza o join com as dimensões de artista e data
 df_fato = df_fato.join(df_artista, df_fato.nome_artista ==
                        df_artista.nome_artista, "inner")
-df_fato = df_fato.join(df_data, df_fato.data_lancamento ==
-                       df_data.data_lancamento, "inner")
+
 
 # Seleciona as colunas finais da tabela fato
 df_fato = df_fato.select(
-    "id_filme",
-    "id_data",
-    "id_artista",
-    "orcamento",
-    "receita",
-    "roi",
-    "nota_media_tmdb",
-    "nota_media_imdb",
-    "qtd_votos_tmdb",
-    "qtd_votos_imdb",
-    "popularidade"
+    "id_filme",  "id_artista", "data_lancamento",
+    "orcamento", "receita", "roi",
+    "nota_media_tmdb", "nota_media_imdb",
+    "qtd_votos_tmdb", "qtd_votos_imdb", "popularidade"
 )
 
 # ============================
 # Escrita das tabelas em formato Parquet no S3
 # ============================
-df_fato.write.mode("overwrite").parquet(f"{output_path}/fato_filmes_artista")
+df_fato.write.mode("overwrite").parquet(
+    f"{output_path}/fato_desempenho_filmes")
 df_data.write.mode("overwrite").parquet(f"{output_path}/dim_data")
 df_artista.write.mode("overwrite").parquet(f"{output_path}/dim_artista")
 df_filmes.write.mode("overwrite").parquet(f"{output_path}/dim_filmes")

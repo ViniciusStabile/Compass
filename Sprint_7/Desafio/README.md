@@ -56,13 +56,14 @@ Criar a **camada Refined** a partir dos dados da camada **Trusted**, estruturand
 
 Nesta etapa, foi desenvolvida a **modelagem dimensional** da camada Refined com o objetivo de organizar os dados de maneira otimizada para análises analíticas (OLAP). O modelo segue o formato **estrela**, com uma **tabela fato central** e três **tabelas dimensão**.
 
-### Tabela Fato: `fato_filmes_artista`
+### Tabela Fato: `fato_desempenho_filmes`
 
 Contém as principais **métricas quantitativas** do projeto, como:
 
 - `orcamento`, `receita`, `roi` (indicadores financeiros)
 - `nota_media_tmdb`, `nota_media_imdb` (avaliações críticas)
 - `qtd_votos_tmdb`, `qtd_votos_imdb`, `popularidade` (indicadores de engajamento)
+- `data_lancamento` (data em que o filme foi lancado)
 
 Cada linha da fato representa um filme vinculado a um artista em uma data de lançamento específica, permitindo análises cruzadas por tempo, artista ou título.
 
@@ -97,9 +98,7 @@ Armazena os metadados principais de cada filme:
 
 - `id_filme`
 - `id_imdb`
-- `titulo_principal`
 - `titulo_original`
-- `titulo_no_brasil`
 
 É útil para exibir corretamente os títulos nas ferramentas de visualização e relatórios.
 
@@ -274,9 +273,7 @@ df_geral = df_tmdb.join(df_local, df_tmdb.imdb_id == df_local.id, "inner")
 df_geral = df_geral.select(
     F.col("id_filme"),
     F.col("imdb_id"),
-    F.col("title").alias("titulo_no_brasil"),
     F.col("tituloPrincipal").alias("titulo_principal"),
-    F.col("tituloOriginal").alias("titulo_original"),
     F.col("release_date").alias("data_lancamento"),
     F.col("numeroVotos").alias("qtd_votos_imdb"),
     F.col("notaMedia").alias("nota_media_imdb"),
@@ -307,13 +304,13 @@ df_data = df_geral.select(F.col("data_lancamento")).distinct()
 df_data = df_data.withColumn("ano", F.year("data_lancamento")) \
     .withColumn("mes", F.month("data_lancamento")) \
     .withColumn("dia", F.dayofmonth("data_lancamento")) \
-    .withColumn("trimestre", F.when(F.month("data_lancamento").isin([1, 2, 3]), "T1")
-                .when(F.month("data_lancamento").isin([4, 5, 6]), "T2")
-                .when(F.month("data_lancamento").isin([7, 8, 9]), "T3")
+    .withColumn("trimestre", F.when(F.col("mes").isin([1, 2, 3]), "T1")
+                .when(F.col("mes").isin([4, 5, 6]), "T2")
+                .when(F.col("mes").isin([7, 8, 9]), "T3")
                 .otherwise("T4")) \
     .withColumn("decada", (F.col("ano") / 10).cast("int") * 10) \
-    .withColumn("id_data", F.monotonically_increasing_id()) \
-    .select("id_data", "data_lancamento", "ano", "mes", "dia", "trimestre","decada")
+    .withColumn("id_data",(F.date_format("data_lancamento", "yyyyMMdd")).cast("int")) \
+    .select("id_data","data_lancamento", "ano", "mes", "dia", "trimestre", "decada")
 ```
 - Cria a dimensão dim_data extraindo ano, mês, dia , trimestre e decada da data de lançamento.
 
@@ -322,7 +319,7 @@ df_data = df_data.withColumn("ano", F.year("data_lancamento")) \
 
 ```python
 df_filmes = df_geral.select(
-    "id_filme", "imdb_id", "titulo_no_brasil", "titulo_principal", "titulo_original"
+    "id_filme", "imdb_id","titulo_principal"
 ).distinct()
 ```
 - Gera a dimensão dim_filmes com os principais identificadores e títulos dos filmes.
@@ -339,25 +336,25 @@ df_fato = df_geral.select(
 )
 
 df_fato = df_fato.join(df_artista, "nome_artista", "inner")
-df_fato = df_fato.join(df_data, "data_lancamento", "inner")
 
 df_fato = df_fato.select(
-    "id_filme", "id_data", "id_artista", "orcamento", "receita", "roi",
-    "nota_media_tmdb", "nota_media_imdb", "qtd_votos_tmdb",
-    "qtd_votos_imdb", "popularidade"
+    "id_filme",  "id_artista","data_lancamento",
+    "orcamento", "receita", "roi",
+    "nota_media_tmdb", "nota_media_imdb",
+    "qtd_votos_tmdb", "qtd_votos_imdb", "popularidade"
 )
 
 ```
 
 - Criação da tabela fato, selecionando somente as métricas principais
-- Realiza join com as dimensoes `dim_artista` e `dim_data` para obter `id_artista` e `id_data`
+- Realiza join com as dimensao `dim_artista` para obter `id_artista` 
 - Seleciono somente as colunas relevantes com as métricas e chaves para o modelo dimensional. 
 
 
 ### Escrita dos dados no S3 (Refined) e finalização do job
 
 ```python
-df_fato.write.mode("overwrite").parquet(f"{output_path}/fato_filmes_artista")
+df_fato.write.mode("overwrite").parquet(f"{output_path}/fato_desempenho_filmes")
 df_data.write.mode("overwrite").parquet(f"{output_path}/dim_data")
 df_artista.write.mode("overwrite").parquet(f"{output_path}/dim_artista")
 df_filmes.write.mode("overwrite").parquet(f"{output_path}/dim_filmes")
