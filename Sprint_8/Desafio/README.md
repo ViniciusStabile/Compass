@@ -52,6 +52,14 @@ Criar um dashboard no **Amazon QuickSight**, utilizando como fonte de dados excl
 - Receita e orçamento ao longo dos anos
 
 
+### Modelagem no QuickSight
+
+Os dados utilizados no QuickSight foram importados da camada **Refined**, armazenados em formato **Parquet** no S3. 
+
+Foi realizada a junção da tabela fato `fato_desempenho_filmes` com as dimensões `dim_artista`, `dim_data` e `dim_filmes` por meio das chaves correspondentes, permitindo análises integradas entre filmes, datas e artistas.
+
+![Dados](../Evidencias/dados.png.png)
+
 ## Analise Dashboard
 
 ![Dash](Dashboard.jpg)
