@@ -54,6 +54,10 @@ Criar um dashboard no **Amazon QuickSight**, utilizando como fonte de dados excl
 
 ## Analise Dashboard
 
+![Dash](Dashboard.jpg)
+
+Para melhor visualização, acesse o [Dashboard em PDF](./Dashboard.pdf).
+
 ### Paleta cores
 
 ![Paleta de cores](../Evidencias/paleta.png)
