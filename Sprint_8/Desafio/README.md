@@ -58,7 +58,7 @@ Os dados utilizados no QuickSight foram importados da camada **Refined**, armaze
 
 Foi realizada a junção da tabela fato `fato_desempenho_filmes` com as dimensões `dim_artista`, `dim_data` e `dim_filmes` por meio das chaves correspondentes, permitindo análises integradas entre filmes, datas e artistas.
 
-![Dados](../Evidencias/dados.png.png)
+![Dados](../Evidencias/dados.png)
 
 ## Analise Dashboard
 
