@@ -94,7 +94,7 @@ Para melhor visualização, acesse o [Dashboard em PDF](./Dashboard.pdf).
   Embora a receita média seja quase o triplo do orçamento médio, isso não necessariamente se traduz em alta rentabilidade para todos os títulos — especialmente quando consideramos o ROI em detalhe.
 
 - **ROI médio:** `2,03`  
-  Ou seja, em média, cada dólar investido gerou US$ 2,03 de retorno bruto. Embora positivo, o número reflete uma indústria com margens apertadas, especialmente considerando os riscos envolvidos. O valor também mostra que a eficiência dos investimentos diminuiu em décadas mais recentes, como analisado nas seções anteriores.
+  Ou seja, em média, cada dólar investido gerou US$ 2,03 de lucro. Embora positivo, o número reflete uma indústria com margens apertadas, especialmente considerando os riscos envolvidos. O valor também mostra que a eficiência dos investimentos diminuiu em décadas mais recentes, como analisado nas seções anteriores.
 
 - **Popularidade média por filme:** `5,08`
 
